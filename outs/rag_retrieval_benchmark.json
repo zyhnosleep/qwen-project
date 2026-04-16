@@ -1,0 +1,73 @@
+{
+  "config": {
+    "top_k": 5,
+    "max_docs": 300,
+    "index_dir": "/home/zyh/mini_qwen_250721/mini_qwen/data/faiss_rag",
+    "embedding_device": "cuda",
+    "rerank_enabled": true
+  },
+  "task_summary": {
+    "task_count": 389,
+    "title_queries": 300,
+    "identifier_queries": 89
+  },
+  "metrics": {
+    "vector_only": {
+      "query_count": 389,
+      "recall_at_k": 0.7661,
+      "top1_accuracy": 0.7635,
+      "avg_latency_ms": 18.97,
+      "p95_latency_ms": 20.8,
+      "by_query_type": {
+        "title": {
+          "recall_at_k": 0.9933,
+          "top1_accuracy": 0.99,
+          "avg_latency_ms": 19.41
+        },
+        "identifier": {
+          "recall_at_k": 0.0,
+          "top1_accuracy": 0.0,
+          "avg_latency_ms": 17.52
+        }
+      }
+    },
+    "hybrid": {
+      "query_count": 389,
+      "recall_at_k": 0.9126,
+      "top1_accuracy": 0.8972,
+      "avg_latency_ms": 228.1,
+      "p95_latency_ms": 421.52,
+      "by_query_type": {
+        "title": {
+          "recall_at_k": 1.0,
+          "top1_accuracy": 1.0,
+          "avg_latency_ms": 233.27
+        },
+        "identifier": {
+          "recall_at_k": 0.618,
+          "top1_accuracy": 0.5506,
+          "avg_latency_ms": 210.66
+        }
+      }
+    },
+    "hybrid_rerank": {
+      "query_count": 389,
+      "recall_at_k": 0.9203,
+      "top1_accuracy": 0.8946,
+      "avg_latency_ms": 359.44,
+      "p95_latency_ms": 529.21,
+      "by_query_type": {
+        "title": {
+          "recall_at_k": 0.9967,
+          "top1_accuracy": 0.9933,
+          "avg_latency_ms": 374.24
+        },
+        "identifier": {
+          "recall_at_k": 0.6629,
+          "top1_accuracy": 0.5618,
+          "avg_latency_ms": 309.58
+        }
+      }
+    }
+  }
+}

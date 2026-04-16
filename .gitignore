@@ -1,0 +1,7 @@
+data/
+results/
+*.parquet
+*.csv
+*.bin
+*.safetensors
+__pycache__/
